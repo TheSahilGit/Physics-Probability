@@ -9,6 +9,7 @@ different number of times, but for a large number of sampling the occurrence of 
 import matplotlib.pyplot as plt
 import random
 
+
 countHead = []
 countTail = []
 tossesNo = []
@@ -19,6 +20,7 @@ countT = 0
 probability = 0.5
 
 maxItr = 30000
+
 
 for tosses in range(500, maxItr, 100):
     for i in range(tosses):
@@ -32,8 +34,10 @@ for tosses in range(500, maxItr, 100):
     tossesNo.append(tosses)
     ratio.append(float(countH / countT))
 
+
 plt.plot(tossesNo, ratio)
-plt.xlabel("No. of Heads and Tails ratio")
+plt.xlabel("No of Iterations")
+plt.ylabel("No. of Heads and Tails ratio")
 plt.title("No. of Heads and Tails ratio for different total tosses")
 plt.grid()
 plt.show()
